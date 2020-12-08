@@ -1,0 +1,27 @@
+.jumbotron__earn {
+    background: url(../img/img5.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 57vh;
+    margin-top: 7rem;
+    position: relative;
+
+
+    &__earn {
+
+    
+    &__text {
+        position: absolute;
+        font-weight: bold;
+        top: 30%;
+    }
+    }
+}
+
+.jumbotron__earn__wrap__text {
+    font-weight: bold;
+    padding-top: 10%;
+    padding-left: 7%;
+    line-height: 0;
+}
+

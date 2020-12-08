@@ -1,0 +1,55 @@
+.res_hd-card {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 60%;
+}
+
+.res_hd-card__rent {
+    color: rgb(228, 30, 87);
+}
+
+// modal内
+.res_hd-modal {
+    
+    padding: 0;
+    border-bottom: 1px solid #000;
+    opacity: 0.7;
+    font-weight: bold;
+}
+.res_hd-between {
+    position: relative;
+    height: 80px;
+    &__inner {
+        position: absolute;
+        top: 50%;
+        border: 1px solid #f3f0f0;
+        width: 100%;
+    }
+}
+
+.res__dropdown {
+    width: 100%;
+    height: 100%;
+}
+
+// デフォルトのdropdownアイコンの位置を変更したかったので既存のアイコンを消してfontawesomeから引っ張った
+.dropdown-toggle {
+    position: relative;
+
+    &:after {
+        display: none;
+    }
+}
+
+.fa-caret-down {
+    position: absolute;
+    right: 3%;
+    top: 28%;
+}
+// placeholderはcssの擬似要素　https://developer.mozilla.org/ja/docs/Web/CSS/::placeholder
+
+.form-control::-webkit-input-placeholder {
+    font-size: 1rem;
+}
+

@@ -1,0 +1,1220 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Boot strap1</title>
+  </head>
+  <body>
+      <header>
+      <!-- nav fixed-topで上部固定ができる -->
+      <!-- navbar-expand-{サイズ}で折り畳むブレイクポイントを設定、指定しない場合は常に広がった状態で表示される -->
+        <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
+          <a class="navbar-brand" href="https://www.airbnb.jp/">
+            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-suit-club" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 1a3.25 3.25 0 0 0-3.25 3.25c0 .186 0 .29.016.41.014.12.045.27.12.527l.19.665-.692-.028a3.25 3.25 0 1 0 2.357 5.334.5.5 0 0 1 .844.518l-.003.005-.006.015-.024.055a21.893 21.893 0 0 1-.438.92 22.38 22.38 0 0 1-1.266 2.197c-.013.018-.02.05.001.09.01.02.021.03.03.036A.036.036 0 0 0 5.9 15h4.2c.01 0 .016-.002.022-.006a.092.092 0 0 0 .029-.035c.02-.04.014-.073.001-.091a22.875 22.875 0 0 1-1.704-3.117l-.024-.054-.006-.015-.002-.004a.5.5 0 0 1 .838-.524c.601.7 1.516 1.168 2.496 1.168a3.25 3.25 0 1 0-.139-6.498l-.699.03.199-.671c.14-.47.14-.745.139-.927V4.25A3.25 3.25 0 0 0 8 1zm2.207 12.024c.225.405.487.848.78 1.294C11.437 15 10.975 16 10.1 16H5.9c-.876 0-1.338-1-.887-1.683.291-.442.552-.88.776-1.283a4.25 4.25 0 1 1-2.007-8.187 2.79 2.79 0 0 1-.009-.064c-.023-.187-.023-.348-.023-.52V4.25a4.25 4.25 0 0 1 8.5 0c0 .14 0 .333-.04.596a4.25 4.25 0 0 1-.46 8.476 4.186 4.186 0 0 1-1.543-.298z"/>
+            </svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav hd-nav">
+              <a class="nav-item nav-link active hd-nav__item" href="#">概要<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link hd-nav__item" href="https://www.airbnb.jp/d/setup">準備</a>
+              <a class="nav-item nav-link hd-nav__item" href="https://www.airbnb.jp/d/safety">安全</a>
+              <a class="nav-item nav-link hd-nav__item" href="https://www.airbnb.jp/d/financials">マネープラン</a>
+            </div>
+          </div>
+          <!-- <button>modal -->
+          <a href="https://www.airbnb.jp/become-a-host" type="button" class="btn btn-danger mr-4 nav-start">はじめる</a>
+        </nav>
+
+        <!-- bottom nav-bar < sm -->
+        
+          <nav class="bottom_nav__item navbar fixed-bottom navbar-dark bg-white">
+            <div class="d-block" style="line-height: 0;">
+              <p class="m-1" style="font-size: 1rem; font-weight: 800; color: black; line-height: 1.25rem;">¥158,395</p>
+              <p>予想月収
+                <svg data-toggle="modal" data-target="#exampleModal" width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-question-circle mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                </svg>
+              </p>
+            </div>
+            <a href="https://www.airbnb.jp/become-a-host" class="navbar-brand btn btn-danger py-0 px-3" style="margin-left: auto; font-size: 15px; border-radius: 0.8rem;" href="#!">リスティング掲載をはじめる</a>
+          </nav>
+       
+    
+        <div class="card" style="border: none;">
+          <div class="container-fluid header__card" id="hd-img">
+            <img class="card-img" style="border-radius: 20px; margin-top: 100px;" src="https://picsum.photos/id/380/1260/515" alt="#">
+          </div>
+          <div class="header__nav"></div>
+        </div>
+
+          <div class="container hd-card">
+            <div class="row">
+              <div class="hd-catch">
+                  <div class="hd-catch__left col-md-10 offset-md-1 col-lg-7 offset-lg-0">
+                    <h1>予想最高ホスティング収入額</h1>
+                      <p class="texts">
+                        <span>週あたり¥60,615</span>
+                        <span>月あたり¥98,968</span>
+                        <span>年あたり¥1,177,968</span>
+                        <span>10年あたり¥13,198,968</span>
+                      </p>
+                    <h1>NaganoのAirbnbホストとして</h1>
+                    <a class="btn" style="font-size: 1rem; max-width: inherit; width: 50%; margin-left: 15px;" data-toggle="modal" data-target="#exampleModal">
+                      予想ホスティング収入額の計算方法
+                    </a> 
+                  </div>
+
+                  <div class="hd-catch__right col-md-10 offset-md-1 col-lg-5 offset-lg-0"> 
+                    <div class="row">
+                      <div class="form-group" style="margin: 0 auto;">
+                        <label for="exampleInputEmail1">どれくらいの収益が見込めるかみていきましょう</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="宿泊施設の所在地">
+                      </div>
+                      <div class="row mt-3" style="margin: 0 auto;">
+                        <select class="btn btn-light dropdown col-md-10 offset-md-1 mt-md-4 col-lg-6 offset-lg-0 mt-lg-0">
+                            <option class="dropdown-item d-none" href="#!">部屋タイプ</option>
+                            <option class="dropdown-item" href="#!">個室</option>
+                            <option class="dropdown-item" href="#!">シェアルーム</option>
+                        </select>
+                      <!-- </div> -->
+    
+                      <!-- <div class="row"> -->
+                        <select class="btn btn-light dropdown col-md-10 offset-md-1 mt-md-3 col-lg-6 offset-lg-0 mt-lg-0">
+                          <option class="dropdown-item d-none" href="#!">人数を選択</option>
+                          <option class="dropdown-item" href="#!">ゲスト1人</option>
+                          <option class="dropdown-item" href="#!">ゲスト2人</option>
+                          <option class="dropdown-item" href="#!">ゲスト3人</option>
+                          <option class="dropdown-item" href="#!">ゲスト4人</option>
+                          <option class="dropdown-item" href="#!">ゲスト5人</option>
+                        </select>
+                      </div>
+                    </div> 
+                    <button type="button" class="btn btn-danger btn-lg btn-block hd-entry" data-toggle="modal" data-target="#staticBackdrop1">はじめる</button>  
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- スマホサイズ以下hd-cardのレスポンシブ -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="res_hd-card col-12">
+            <p style="line-height: 2rem;">最大ホスティング収入：</p>
+            <div class="d-flex" style="flex-wrap: wrap;">
+              <p class="res_hd-card__rent">¥&nbsp;124,243</p></style><span>/</span><p>１ヶ月、エリア：</p>
+            </div>
+            <p>TOKYO</p>
+            
+            <a class="btn res_hd-modal" style="font-size: 14px;" data-toggle="modal" data-target="#exampleModal">
+              予想ホスティング収入額の計算方法
+            </a>     
+      
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header border-0">
+                    <button type="button" class="close" style="position: absolute;" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h3 class="modal-title" id="exampleModalLabel">予想ホスティング収入額の計算方法</h3>
+                    <p class="mt-3" style="font-size: 1rem; font-weight: lighter; line-height: 1.5rem;">表示される予想ホスティング収入の標準設定は、ゲスト定員4名のまるまる貸切リスティングのものです。 予想ホスティング収入は、お住まいのエリアの過去2年間の予約データに基づいており、1泊あたりの料金に稼働日数（稼働率）をかけて計算されたものです。 計算に使用される1泊あたりの料金は、平均料金（経費、手数料、税金を除く）に基づいています。 月ごと、および1年あたりの予想ホスティング収入の計算に使用される稼働率は、上位50%のリスティングが予約される頻度に基づいています。 積極的に活動するホストのホスティング収入の可能性を示すため、上位50%のリスティングの情報を使用しています。 月ごと、および1年あたりのホスティング収入予想では、十分な予約可能状況を設定しているリスティングのみが考慮されます。 1週間あたりのホスティング収入予想は、7日間の稼働率で計算されています。 潜在的なリスティングに関する情報が提供されている場合、予想ホスティング収入の見積もりにはその情報が反映されます。 金額は推定であり、保証されるものではありません。 実際の収入は予約可能状況、料金、リスティングの特徴とアメニティ・設備、受け入れ率とキャンセル率、ゲストレビュー、適用される法的制限、リスティングがある地域の需要、その他の要因によって変動します。</p>
+                      <h4 class="mt-5">予想収益額を計算してみましょう</h4>
+                    <p class="mt-3" style="font-size: 1rem; font-weight: lighter;">計算された予想収益額は情報提供に基づくものであり、経費、手数料、税金は考慮されていません</p>
+                  </div> 
+                  <!-- 大きさが足りないのでスクロールできるタイプのモーダルを設定する -->
+                  <div class="modal-footer border-0 d-flex justify-content-start">
+                    <form class="w-100 d-flex">
+                      <div class="form-group col-6">
+                        <input type="text" id="form1" class="form-control" placeholder="宿泊予定日数/半角数字">
+                      </div> 
+                      <div class="form-group col-6">
+                        <input type="text" id="form2" class="form-control" placeholder="1泊料金/半角数字">
+                      </div> 
+                    </form>  
+                    <div id="form3" class="col-4 mt-3 mb-5" style="font-size: 2rem; font-weight: bold;"></div>
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        
+          <!-- 中間ボーダー -->
+          <div class="container res_hd-card">
+            <div class="row res_hd-between">
+              <div class="res_hd-between__inner"></div>
+            </div>
+          </div>
+      
+        <div class="row" style="font-size: 1.25rem; font-weight: normal; margin: 0;">
+          <p style="font-size: 18px; line-height: 1.75rem;">予想ホスティング収入額を更新するにはお部屋についてさらに詳しくお聞かせください</p>
+          <ul class="list-group col-12 res__dropdown">
+            <input class="form-control form-control-lg" type="text" placeholder="所在地">
+
+            <div class="dropdown" style="font-size: 1rem;">
+              <button class="btn btn-lg btn-white dropdown-toggle" style="width: 100%; border: 1px solid rgb(201, 194, 194); border-top: none; text-align: left; font-size: 1rem;"
+                      type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                まるまる貸切<i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Action</a>
+                <a class="dropdown-item" href="#!">Another action</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn btn-lg btn-white dropdown-toggle" style="width: 100%; border: 1px solid rgb(201, 194, 194); border-top: none; text-align: left; font-size: 1rem;"
+                      type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                ゲスト４人<i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Action</a>
+                <a class="dropdown-item" href="#!">Another action</a>
+              </div>
+            </div>
+          </ul>
+
+          <!-- res hd2つめ -->
+
+          <ul class="list-group col-12 res__dropdown mt-3" >
+            <div class="dropdown">
+              <button class="btn btn-lg btn-white dropdown-toggle" style="width: 100%; border: 1px solid rgb(201, 194, 194); text-align: left; font-size: 1rem;"
+                      type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                建物タイプ<i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Action</a>
+                <a class="dropdown-item" href="#!">Another action</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn btn-lg btn-white dropdown-toggle" style="width: 100%; border: 1px solid rgb(201, 194, 194); border-top: none; text-align: left; font-size: 1rem;"
+                      type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                寝室<i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Action</a>
+                <a class="dropdown-item" href="#!">Another action</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn btn-lg btn-white dropdown-toggle" style="width: 100%; border: 1px solid rgb(201, 194, 194); border-top: none; text-align: left; font-size: 1rem;"
+                      type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                バスルーム<i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Action</a>
+                <a class="dropdown-item" href="#!">Another action</a>
+              </div>
+            </div>
+          </ul>
+
+          <!-- アコーディオンを使ってメニューの開閉を操作した -->
+          <details class="mt-3">
+            <summary id="res__accordion" style="font-size: 14px;">ゲストが利用できる特別なスペースがあればお知らせください</summary>
+            
+            <p style="font-size: 1rem;">ゲストに人気な特別なアメニティ・設備がある場合は、お知らせください</p>
+            
+            <div class="d-flex mb-3" style="font-size: 1rem; font-weight: lighter;">
+              <div class="custom-control custom-checkbox col-6">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">ジム</label>
+              </div>
+              <div class="custom-control custom-checkbox col-6">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">ウォーターフロント</label>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3" style="font-size: 1rem">
+              <div class="custom-control custom-checkbox col-6">
+                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">露天風呂・ジャグジー</label>
+              </div>
+              <div class="custom-control custom-checkbox col-6">
+                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                <label class="custom-control-label" for="customCheck4">ビーチフロント</label>
+              </div>
+            </div>
+              <div class="custom-control custom-checkbox col-6" style="font-size: 1rem">
+                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                <label class="custom-control-label" for="customCheck5">プール</label>
+              </div>
+              
+            </details>
+
+          <button type="button" class="btn btn-lg btn-danger col-12 mt-3" data-toggle="modal" data-target="#staticBackdrop1">リスティング掲載をはじめる</button>
+            <!-- modal1つめ -->
+            <div class="modal fade container" id="staticBackdrop1" data-backdrop="true" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog row">
+                <div class="modal-content">
+                  <button type="button" class="close text-left mt-2 ml-3" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-header border-0">
+                    <h4 class="modal-title" style="margin: 0 auto; font-weight: lighter;" id="staticBackdropLabel">進捗状況を保存しましょう</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p style="font-size: 1rem;">連絡先を入力してリスティング情報を保存してください。こうしておけば、お部屋の掲載後、スムーズにお部屋の掲載を始められます。</p>
+                    <input class="form-control form-control-lg border-bottom-0" id="must-input__address" type="text" placeholder="メールアドレス">
+                    <input class="form-control form-control-lg" type="text" placeholder="電話番号(任意)">
+                    
+                    <div class="custom-control custom-checkbox mt-4">
+                      <input type="checkbox" class="custom-control-input" id="customCheck6">
+                      <label class="custom-control-label" style="font-size: 14px;" for="customCheck6">Airbnbから不定期に配信され、いつでも登録の解除のできる東京でのホスティングに関するヒントや情報の受信を希望します</label>
+                    </div>
+                    <p class="text-center mt-4" style="font-size: 14px; opacity: 0.5;">私は「次へ」を選択することで<a class="private_policy" style="color: black; border-bottom: 1px solid black;" href="https://www.airbnb.jp/help/article/2855/%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E4%BF%9D%E8%AD%B7%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">
+                      Airbnbの個人情報保護ポリシー</a>に従ってAirbnbが私の個人情報を処理することに同意します</p>
+
+                  </div>
+                  <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                    <button type="submit" class="btn btn-primary" id="goAhead" data-toggle="modal" data-target="#staticBackdrop2" onclick="changeModal()">次へ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- modal2つめ -->
+            <div class="modal fade container" id="staticBackdrop2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog row" role="document">
+                <div class="modal-content">
+                  <div class="row modal-header border-bottom-0">
+                    <button type="button" class="close" style="position: absolute; left: 10px;" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                     <h6 class="modal-title" style="margin: 0 auto;" id="exampleModalLabel">登録する</h6>
+                  </div>
+
+                  <!-- class="btn btn-light dropdown col-md-10 offset-md-1 mt-md-3 col-lg-6 offset-lg-0 mt-lg-0" -->
+                  <div class="modal-body mt-3">
+                    <div class="btn-group dropdown d-block">
+                      <select class="form-control form-control-lg" style="font-size: 1rem">
+                        
+                        <option class="d-none">日本(+81)</option>
+                        <option>日本(+81)</option>
+                        <option>アメリカ合衆国</option>
+                        <option>中国</option>
+                        <option>イタリア</option>
+                      </select>
+   
+                    <input class="form-control border-top-0" type="text" placeholder="電話番号(任意/半角)">
+                  </div>
+                  <p class="mt-2" style="font-size: 12px; opacity: 0.6;">番号確認のため、電話またはSMSでご連絡いたします。SMS基本料金およびデータ通信量がかかります。</p>
+                  <button class="btn btn-danger w-100">続行する</button>
+
+                  <div class="container">
+                    <div class="row mt-3 d-flex">
+                      <p class="sns_border">または</p> 
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="modal-footer container border-0">
+                    <div class="row">
+                      <button class="sns_link w-100 btn btn-white btn-lg font-weight-bold" style="border: 2px solid rgb(190, 182, 182); text-align: center; font-size: 12px;">
+                        <img class="sns_icon" src="https://img.icons8.com/fluent/30/000000/apple-mail.png"/>
+                        メールアドレスで続行
+                      </button>
+                      
+                      
+                        <a class="sns_link w-100 btn btn-white btn-lg font-weight-bold mt-3" style="border: 2px solid rgb(190, 182, 182); text-align: center; font-size: 12px;" target="_blank" link="noopener" href="https://www.facebook.com/dialog/oauth?response_type=code&client_id=138566025676&state=XFJYUQIIMSAPAXAYZNVZWNDMLHEFUA&scope=email%20user_birthday%20user_likes%20user_hometown%20user_location%20user_friends&redirect_uri=https%3A%2F%2Fwww.airbnb.jp%2Foauth_callback">
+                          <img class="sns_icon" src="https://img.icons8.com/fluent/30/000000/facebook-new.png"/>
+                          Facebookで続行
+                        </a>
+                      
+
+                      <button class="sns_link w-100 btn btn-white btn-lg font-weight-bold mt-3" style="border: 2px solid rgb(190, 182, 182); text-align: center; font-size: 12px;" target="_blank" link="noopener" href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?response_type=code&access_type=offline&client_id=622686756548-j87bjniqthcq1e4hbf1msh3fikqn892p.apps.googleusercontent.com&state=LFATWKACJOKZSLXTNEHYAXEOLAMREB&scope=profile%20email&redirect_uri=https%3A%2F%2Fwww.airbnb.jp%2Foauth_callback&flowName=GeneralOAuthFlow">
+                        <img class="sns_icon" src="https://img.icons8.com/fluent/30/000000/google-logo.png"/>
+                        Googleで続行
+                      </button>
+                      <button class="sns_link w-100 btn btn-white btn-lg font-weight-bold mt-3" style="border: 2px solid rgb(190, 182, 182); text-align: center; font-size: 12px;" target="_blank" link="noopener" href="https://appleid.apple.com/auth/authorize?response_type=code&response_mode=form_post&client_id=com.airbnb.web&state=IVERGCZOUPFNGSNAXBUPUNQDSAGCVS&scope=name+email&redirect_uri=https%3A%2F%2Fwww.airbnb.jp%2Foauth_callback">
+                        <img class="sns_icon" src="https://img.icons8.com/ios-filled/30/000000/mac-os.png"/>
+                        Appleで続行
+                      </button>
+                      <p class="mt-3" style="font-size: 12px;">すでにアカウントはお持ちですか？<a class="ml-2" style="color: black;" href="#">ログイン</a></p>
+                    </div>
+                  </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+        <div class="container hd-section">
+          <div class="row justify-content-center">
+            <div class="col-xl-5 col-md-8 hd-section__left">
+              <h1>Airbnbでホストするこれだけの理由</h1> 
+              <p>どんなお家やお部屋でも、Airbnbなら簡単かつ安全にシェアでき、世界中の旅好きな仲間とつながれます。 予約可能日から料金、ハウスルール、ゲストとの交流程度まで、すべて自分で決めることができます。</p>
+            </div>
+            <div class="col-xl-5 col-md-8 hd-section__right">
+              <h1>困ったときも安心</h1>
+              <p>万一に備えるUS$1,000,000の財物補償、US$1,000,000の賠償責任保険が全予約に自動付帯。ホストのみなさまと建物・家財の安全をお守りするため全力で取り組んでいます。</p>
+            </div>
+          </div>
+        </div>
+
+      <div class="container jumbotron">
+        <div class="row">
+          <div class="jumbotron__inner" style="padding-left: 0;">
+            <h1 class="jumbotron__main display-4">3ステップでホスティング</h1>
+            <!-- レスポンシブ用タイトル -->
+            <h1 class="res__jumbotron__main">3ステップでホスティング</h1>
+
+            <div class="jumbotron__cards">
+              <div class="row justify-content-center">
+
+              <div class="card__inner card bg-white mb-3 border-0 col-xl-4 col-md-8">
+               
+                <div class="jumbotron__cards__header bg-white border-0">
+                  <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                  </svg>
+                </div>
+              
+                <div class="card-body">
+                  <h4 class="card-title">無料でお部屋を掲載</h4>
+                  <p class="card-text">共有のリビングルームから別荘に至るまで、どんなスペースでも登録料なしで共有しましょう。</p>
+                </div>
+              </div>
+
+              <div class="card__inner card bg-white mb-3 border-0 col-xl-4 col-md-8">
+                <div class="jumbotron__cards__header bg-white border-0">
+                  <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                  </svg>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">ホスティング方法を設定</h5>
+                  <p class="card-text">スケジュール、料金、ゲストへの要件をご自身で選択しましょう。 お困りの際にはいつでもサポートいたします。</p>
+                </div>
+              </div>
+
+              <div class="card__inner card bg-white mb-3 border-0 col-xl-4 col-md-8">
+                <div class="jumbotron__cards__header bg-white border-0">
+                  <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                  </svg>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">はじめてのゲストが来ます！</h5>
+                  <p class="card-text">リスティングが掲載されると、条件にかなったゲストから連絡を受けとることができます。 ゲストの到着前に質問があればメッセージを送信できます。</p>
+                  <a href="https://www.airbnb.jp/d/setup">ホストをはじめる方法をチェック</a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container act">
+        <div class="row d-flex">
+            <div class="card action__sample col-5 border-0">
+              <!-- icon color FDB32B -->
+              <div class="row" style="padding-top: 10%;">
+                <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chat-quote" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                  <path d="M7.468 7.667c0 .92-.776 1.666-1.734 1.666S4 8.587 4 7.667C4 6.747 4.776 6 5.734 6s1.734.746 1.734 1.667z"/>
+                  <path fill-rule="evenodd" d="M6.157 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.923.997.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.47-.563zm-.035-.012h-.001.001z"/>
+                  <path d="M11.803 7.667c0 .92-.776 1.666-1.734 1.666-.957 0-1.734-.746-1.734-1.666 0-.92.777-1.667 1.734-1.667.958 0 1.734.746 1.734 1.667z"/>
+                  <path fill-rule="evenodd" d="M10.492 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.924.997.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.469-.563zm-.034-.012h-.002.002z"/>
+                </svg>
+                <h2 class="action-sample__main" style="font-weight: lighter;">「ホスト保証」があったからAirbnb参加を決めたといっても過言でないほどで、被害やトラブルがあったときに頼れるサポートがあるのは本当にありがたいですね。</h2>
+                <p>Dennisさんはロンドンのホスト。自由度の高さに魅力を感じています</p>
+                <!-- 以下jsから読み込む -->
+                <button id="button" type="button" class="btn btn-lg btn-white border-dark font-weight-bold">ホスト実践例をチェック</button>
+              </div>
+            </div>
+              <div class="card action__pic offset-1 col-6 border-0">
+                <a  href="https://www.airbnb.jp/d/host_testimonial_dennis">
+                  <img src="https://picsum.photos/id/1047/515/515">
+                </a>
+              </div>
+        </div>
+      </div>
+      <!-- sm < action < lg -->
+
+      <div class="container action__md">
+        <div class="row d-flex">
+            <div class="card col-5 border-0">
+              <!-- icon color FDB32B -->
+              <div class="row" style="padding-top: 20%;">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chat-quote" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                  <path d="M7.468 7.667c0 .92-.776 1.666-1.734 1.666S4 8.587 4 7.667C4 6.747 4.776 6 5.734 6s1.734.746 1.734 1.667z"/>
+                  <path fill-rule="evenodd" d="M6.157 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.923.997.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.47-.563zm-.035-.012h-.001.001z"/>
+                  <path d="M11.803 7.667c0 .92-.776 1.666-1.734 1.666-.957 0-1.734-.746-1.734-1.666 0-.92.777-1.667 1.734-1.667.958 0 1.734.746 1.734 1.667z"/>
+                  <path fill-rule="evenodd" d="M10.492 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.924.997.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.469-.563zm-.034-.012h-.002.002z"/>
+                </svg>
+                <h5 class="action-md" style="font-weight: lighter;">「ホスト保証」があったからAirbnb参加を決めたといっても過言でないほどで、被害やトラブルがあったときに頼れるサポートがあるのは本当にありがたいですね。</h5>
+                <p style="font-weight: lighter; font-size: 14px; line-height: 1rem;">Dennisさんはロンドンのホスト。自由度の高さに魅力を感じています</p>
+                <!-- 以下jsから読み込む -->
+                <button id="button" type="button" class="btn btn-lg btn-white border-dark font-weight-bold">ホスト実践例をチェック</button>
+              </div>
+            </div>
+              <div class="card action__pic offset-1 col-6 border-0">
+                <a  href="https://www.airbnb.jp/d/host_testimonial_dennis">
+                  <img src="https://picsum.photos/id/1047/333/333">
+                </a>
+              </div>
+        </div>
+      </div>
+  
+      <!-- sm > sample -->
+      <div class="res__action">
+        <div class="card" style="border: none;">
+          <div class="container-fluid res__action__pic" id="hd-img">
+            <img class="card-img" src="https://picsum.photos/id/1047/333/333" alt="#">
+          </div>
+        </div>
+  
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+  
+              <svg class="my-2" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chat-quote" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                <path d="M7.468 7.667c0 .92-.776 1.666-1.734 1.666S4 8.587 4 7.667C4 6.747 4.776 6 5.734 6s1.734.746 1.734 1.667z"/>
+                <path fill-rule="evenodd" d="M6.157 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.923.997.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.47-.563zm-.035-.012h-.001.001z"/>
+                <path d="M11.803 7.667c0 .92-.776 1.666-1.734 1.666-.957 0-1.734-.746-1.734-1.666 0-.92.777-1.667 1.734-1.667.958 0 1.734.746 1.734 1.667z"/>
+                <path fill-rule="evenodd" d="M10.492 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.924.997.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.469-.563zm-.034-.012h-.002.002z"/>
+              </svg>
+              <h2 class="res__action-sample__main" style="font-size: 1.25rem; font-weight: lighter;">「ホスト保証」があったからAirbnb参加を決めたといっても過言でないほどで、被害やトラブルがあったときに頼れるサポートがあるのは本当にありがたいですね。</h2>
+              <p style="font-size: 14px;">Dennisさんはロンドンのホスト。自由度の高さに魅力を感じています</p>
+              <button id="button" type="button" class="btn btn-lg btn-white border-dark" style="font-size: 1rem; border-width: 2px;">ホスト実践例をチェック</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- support < sm -->
+      <div class="container res__support">
+        <div class="row">
+          <h1 class="display-4 res__support__main ml-3" >万一のときも安心です</h1>
+        </div>
+      </div>
+      
+      <div class="container support">
+        <div class="row">
+          <h1 class="display-4 support__main" style="left: 18%;">万一のときも安心です</h1>
+        </div>
+          <div class="row">
+          <div class="support__inner">
+            <div class="support__left col-xl-5">
+                <p>大切なお家にお迎えする相手選びは、信頼第一で進めたいですよね。 その思いに応えるため、Airbnbでは宿泊者に求める厳格な要件をホスト自身の手で設定し、滞在前にお互い交流できるシステムを採用しています。 万一のトラブルのときには、Airbnbが全力でサポートします。
+                  建物・家財の被害は「ホスト保証」、賠償責任は「ホスト補償保険」でカバー。ホストのみなさまのあらゆるシチュエーションに対処しています。</p>
+                <a href="https://www.airbnb.jp/d/safety">ホストを守るAirbnbの仕組みをチェック</a>
+            </div>
+
+                <div class="support__right offset-xl-1 col-xl-6">
+                  <div class="support__right__wrap d-flex">
+                    <svg class="support__right__wrap__check mt-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <p class="support__right__txt">予約前に政府発行の身分証明書を求める権限</p>
+                  </div>
+
+                  <div class="support__right__wrap d-flex">
+                    <svg class="support__right__wrap__check mt-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <p class="support__right__txt">ハウスルールに同意しないと泊まれない</p>
+                  </div>
+
+                  <div class="support__right__wrap d-flex">
+                    <svg class="support__right__wrap__check mt-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <p class="support__right__txt">過去の宿泊のレビューもばっちり読める</p>
+                  </div>
+
+                  <div class="support__right__wrap d-flex">
+                    <svg class="support__right__wrap__check mt-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <p class="support__right__txt">財物損害は¥100,000,000まで無料で補償</p>
+                  </div>
+
+                  <div class="support__right__wrap d-flex">
+                    <svg class="support__right__wrap__check mt-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <p class="support__right__txt">$1,000,000の賠償責任保険が無料で付帯</p>
+                  </div>
+
+                  <div class="support__right__wrap d-flex">
+                    <svg class="support__right__wrap__check mt-1" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <p class="support__right__txt">24時間365日対応グローバルカスタマーサポート</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          
+
+          <!-- sm < support < lg -->
+          <div class="container support__md" style="margin-top: 6rem;">
+            <div class="row">
+                <h1 class="support__main_md" style="margin: 0 auto;">万一のときも安心です</h1>
+            </div>
+            <div class="row">
+              <div class="support__p_md col-8 offset-2">
+                <p class="mt-5">大切なお家にお迎えする相手選びは、信頼第一で進めたいですよね。 その思いに応えるため、Airbnbでは宿泊者に求める厳格な要件をホスト自身の手で設定し、滞在前にお互い交流できるシステムを採用しています。 万一のトラブルのときには、Airbnbが全力でサポートします。
+                  建物・家財の被害は「ホスト保証」、賠償責任は「ホスト補償保険」でカバー。ホストのみなさまのあらゆるシチュエーションに対処しています。</p>
+                <a href="https://www.airbnb.jp/d/safety">ホストを守るAirbnbの仕組みをチェック</a>
+            </div>
+            </div>
+          </div>
+
+    <!-- <div class="container">
+      <div class="row">
+        <div class="jumbotron-middle-pic col-xl-12">
+          <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-4 border-0">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        </div>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="row card jumbotrom-middle-pic" style="border: none;">
+        <a href="https://www.airbnb.jp/d/host_testimonial_tessa" class="container-fluid" id="hd-img">
+          <img class="card-img" src="https://picsum.photos/1000/1000" alt="#">
+        </a>
+      </div>
+    </div>
+
+
+    <div class="container jumbotron-payment">
+      <div class="row">
+        <div class="jumbotron-payment__inner">
+          <h1 class="jumbotron-payment__main display-4">シンプルな決済</h1>
+
+          <!-- レスポンシブ用<h1> -->
+          <h1 class="res__jumbotron-payment__main" style="margin-left: 2rem;">シンプルな決済</h1>
+
+          <div class="jumbotron__cards d-flex justify-content-between">
+            <div class="card bg-white mb-3 border-0 col-md-4 sm-8">
+              <div class="jumbotron__cards__header bg-white border-0">
+                <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                </svg>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">料金設定は完全に自由</h4>
+                <p class="card-text">料金は常に自由に選択できます。 迷ったときには、 域内需要に合わせて設定できるツールがあります。</p>
+              </div>
+            </div>
+
+            <div class="card bg-white mb-3 border-0 col-md-4 col-sm-8">
+              <div class="jumbotron__cards__header bg-white border-0">
+                <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                </svg>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">手数料が安い</h5>
+                <p class="card-text">登録に費用は一切かかりません。Airbnbは通常、予約ごとに業界で最低の均一3％をサービス料としていただいております。</p>
+              </div>
+            </div>
+
+            <div class="card bg-white mb-3 border-0 col-md-4 col-sm-8">
+              <div class="jumbotron__cards__header bg-white border-0">
+                <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                </svg>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">迅速な支払い</h5>
+                <p class="card-text">ゲストのチェックイン後に、Paypal、直接振り込み、またはその他の利用可能な方法で受取金を送金できます。</p>
+                <a href="https://www.airbnb.jp/d/financials">Airbnb収入を得るまでの流れを見る</a>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container d-flex life-upgrade">
+          <div class="card d-flex life-upgrade__left col-md-6" style="border: none;">
+            <a href="https://www.airbnb.jp/d/host_testimonial_tessa">
+              <img src="https://picsum.photos/515/515">
+            </a>
+          </div>
+
+          <div class="life-upgrade__right col-md-6">
+            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chat-quote" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+              <path d="M7.468 7.667c0 .92-.776 1.666-1.734 1.666S4 8.587 4 7.667C4 6.747 4.776 6 5.734 6s1.734.746 1.734 1.667z"/>
+              <path fill-rule="evenodd" d="M6.157 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.923.997.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.47-.563zm-.035-.012h-.001.001z"/>
+              <path d="M11.803 7.667c0 .92-.776 1.666-1.734 1.666-.957 0-1.734-.746-1.734-1.666 0-.92.777-1.667 1.734-1.667.958 0 1.734.746 1.734 1.667z"/>
+              <path fill-rule="evenodd" d="M10.492 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.924.997.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.469-.563zm-.034-.012h-.002.002z"/>
+            </svg>
+            <h2 class="life-upgrade__right__main">ホスト収入でキッチンリフォーム。お家をいろいろアップグレードしました。</p>
+            
+            <button id="second-button" type="button" class="btn btn-lg btn-white border-dark font-weight-bold">ホスト実践例をチェック</button>
+          </div>
+      </div>
+
+      <!-- lg > life-upgrade > sm --> 
+      <div class="container d-flex life-upgrade__md">
+        <div class="card life-upgrade__md__left col-md-6" style="border: none;">
+          <a href="https://www.airbnb.jp/d/host_testimonial_tessa">
+            <img src="https://picsum.photos/325/325">
+          </a>
+        </div>
+
+        <div class="life-upgrade__md__right col-md-6" style="position: relative;">
+          <div class="row" style="font-weight: lighter; position: absolute; top: 7%;">
+            <div class="col-12">
+
+              <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-chat-quote" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                <path d="M7.468 7.667c0 .92-.776 1.666-1.734 1.666S4 8.587 4 7.667C4 6.747 4.776 6 5.734 6s1.734.746 1.734 1.667z"/>
+                <path fill-rule="evenodd" d="M6.157 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.923.997.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.47-.563zm-.035-.012h-.001.001z"/>
+                <path d="M11.803 7.667c0 .92-.776 1.666-1.734 1.666-.957 0-1.734-.746-1.734-1.666 0-.92.777-1.667 1.734-1.667.958 0 1.734.746 1.734 1.667z"/>
+                <path fill-rule="evenodd" d="M10.492 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.924.997.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.469-.563zm-.034-.012h-.002.002z"/>
+              </svg>
+              <h3 class="life-upgrade__md__text" style="font-weight: lighter;">ホスト収入でキッチンリフォーム。お家をいろいろアップグレードしました。</h3>
+              <p style="font-size: 14px; line-height: 1rem;">Tessaさんはロンドン在住。ホストになって経済的なゆとりができました</p>
+              <button id="second-button" type="button" class="btn btn-lg btn-white border-dark font-weight-bold">ホスト実践例をチェック</button>
+            </div>
+          </div>
+        </div>
+       </div>
+
+
+      <!-- life-upgrade　< sm -->
+
+          <div class="container res__life-upgrade">
+            <div class="card row res__life-upgrade__top" style="border: none;">
+              <a href="https://www.airbnb.jp/d/host_testimonial_tessa" class="container-fluid" id="hd-img">
+                <img class="card-img" src="https://picsum.photos/1000/1000" alt="#">
+              </a>
+            </div>
+
+            <div class="row">
+              <div class="res__life-upgrade__bottom mt-3 col-12">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chat-quote" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                  <path d="M7.468 7.667c0 .92-.776 1.666-1.734 1.666S4 8.587 4 7.667C4 6.747 4.776 6 5.734 6s1.734.746 1.734 1.667z"/>
+                  <path fill-rule="evenodd" d="M6.157 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.923.997.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.47-.563zm-.035-.012h-.001.001z"/>
+                  <path d="M11.803 7.667c0 .92-.776 1.666-1.734 1.666-.957 0-1.734-.746-1.734-1.666 0-.92.777-1.667 1.734-1.667.958 0 1.734.746 1.734 1.667z"/>
+                  <path fill-rule="evenodd" d="M10.492 6.936a.438.438 0 0 1-.56.293.413.413 0 0 1-.274-.527c.08-.23.23-.44.477-.546a.891.891 0 0 1 .698.014c.387.16.72.545.924.997.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c1.093-1.087 1.058-2.158.77-2.794-.152-.336-.354-.514-.469-.563zm-.034-.012h-.002.002z"/>
+                </svg>
+                <h4 style="font-size: 1.25rem;">ホスト収入でキッチンリフォーム。お家をいろいろアップグレードしました。</h4>
+                <p style="line-height: 1.25rem; font-size: 14px;">Tessaさんはロンドン在住。ホストになって経済的なゆとりができました</p>
+                <button id="second-button" type="button" class="btn btn-lg btn-white border-dark font-weight-bold">ホスト実践例をチェック</button>
+              </div>
+            </div>
+
+          </div>
+        
+      
+      
+    <div class="container">
+        <div class="row">
+          <div class="jumbotron-about__inner">
+            <h1 class="jumbotron-about__main display-4">Airbnbについて</h1>
+            <!-- レスポンシブ用h1 -->
+            <h1 class="res__jumbotron-about__main display-4" style="text-align: left; margin: 2rem;">Airbnbについて</h1>
+            <div class="jumbotron__cards d-flex">
+              <div class="card bg-white mb-3 border-0 col-xl-6">
+                <div class="jumbotron__cards__header bg-white border-0">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Airbnbとは？</h5>
+                  <p class="card-text">Airbnbは世界中の宿泊先や体験と人々をつなぎます。 ホストたちが原動力となるコミュニティが、地元のように旅するユニークな機会をゲストに提供しています。</p>
+                </div>
+              </div>
+  
+              <div class="card bg-white mb-3 border-0 col-xl-6">
+                <div class="jumbotron__cards__header bg-white border-0">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">ホスティングとは？</h5>
+                  <p class="card-text">空いているお部屋やお家、得意分野があるなら、世界中の仲間とシェアして暮らしをステップアップできます。 掲載できるのはお部屋や体験です。掛け持ちもOK。 無理のないペースでできます。</p>
+                  <a href="https://www.airbnb.jp/host/experiences?from_homehost=1">体験ホスティングの詳細はこちら</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container jumbotron question">
+        <h1 class="question__main display-4 text-center font-weight-bold">よくある質問</h1>
+        <!-- レスポンシブ用h1 -->
+        <h1 class="res__question__main display-4 font-weight-bold" style="text-align: left; margin-left: 0.5rem;">よくある質問</h1>
+          <div class="row question__wrap">
+            <ul class="list-group question__wrap__left col-xl-6">
+              <a class="list-group-item border-left-0 border-right-0 border-top-0" style="border-bottom: 2px;" href="#" data-toggle="modal" data-target="#exampleModalCenter">Airbnbホストになれるのはどんな人？</a>
+              
+              <!-- Modal -->
+              <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content p-4">
+                    <div class="modal-header border-0">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                      <h4 class="modal-title question__title" id="exampleModalCenterTitle">Airbnbホストになれるのはどんな人？</h5>
+                      <p class="modal-footer border-0">
+                        一部の地域を除き、Airbnbでホスティングを始めるのはとても簡単です。リスティングの作成および掲載もすべて無料。 マンションやアパート、一軒家のまるまる貸切から個室、ツリーハウス、お城などはAirbnbで掲載している宿泊先タイプのほんの一例でしかありません。
+                      </p>
+                      <p class="modal-footer border-0">
+                        ホストに求められる詳しい条件は、安全、セキュリティ、信頼性に関するAirbnbコミュニティの基準、高評価レビュー獲得のポイントをまとめたホスピタリティの基準をチェックしてみましょう。
+                      </p>
+                  </div>
+                </div>
+              </div>
+            
+              <a class="list-group-item border-left-0 border-right-0" style="border-bottom: 2px;" href="#" data-toggle="modal" data-target="#exampleModalSecond">予約前にゲストに求められる要件は？</a>
+
+              <div class="modal" id="exampleModalSecond" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <!-- style="min-width: 560px;が効くがmdサイズのちょうどいい大きさにできない -->
+                  <div class="modal-content p-4">
+                    <div class="modal-header border-0">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                      <h4 class="modal-title question__title" id="exampleModalCenterTitle">予約前にゲストに求められる要件は？</h5>
+                      <p class="modal-footer border-0">
+                        Airbnbではご予約のみなさまに事前にいくつかの個人情報の入力をお願いしています。 ゲストは、予約をリクエストする前に必要事項をすべて記入しなければなりません。 これはホストが宿泊者の情報と連絡先を確認するためのものです。                      </p>
+                      <p class="modal-footer border-0">
+                        Airbnbでは、ゲストに下記のような情報のご提出をお願いしています。 • 氏名 • メールアドレス • 認証済みの電話番号 • 自己紹介メッセージ • ハウスルールへの同意 • お支払い情報
+                      </p>
+                      <p class="modal-footer border-0">
+                        ゲストにはプロフィール写真の公開も推奨していますが、これは必須というわけではありません。 さらにホストは、宿泊予約の前にAirbnbに身分証明書を提示するようゲストに求めることもできます。
+                      </p>
+                  </div>
+                </div>
+              </div>
+
+              <a class="list-group-item border-left-0 border-right-0" href="#" data-toggle="modal" data-target="#exampleModalThird">お部屋の掲載料はいくら？</a>
+              <div class="modal" id="exampleModalThird" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <!-- style="min-width: 560px;が効くがmdサイズのちょうどいい大きさにできない -->
+                  <div class="modal-content p-4">
+                    <div class="modal-header border-0">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                      <h4 class="modal-title question__title" id="exampleModalCenterTitle">お部屋の掲載料はいくら？</h5>
+                      <p class="modal-footer border-0 justify-content-start">
+                        Airbnbは利用登録もお部屋の掲載も完全に無料です。</p>
+                      <p class="modal-footer border-0">
+                        予約が入った時点で通常3%をホストのみなさまからAirbnbサービス料として申し受け、運営費に充てています</p>
+                      
+                  </div>
+                </div>
+              </div>
+            </ul>
+
+            <ul class="list-group question__wrap__right col-xl-5">
+              <a class="list-group-item border-left-0 border-right-0 border-top-0" style="border-bottom: 2px;" href="#" data-toggle="modal" data-target="#exampleModalFourth">家財破損があった場合、どのような補償がありますか？</a>
+              <div class="modal" id="exampleModalFourth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <!-- style="min-width: 560px;が効くがmdサイズのちょうどいい大きさにできない -->
+                  <div class="modal-content p-4">
+                    <div class="modal-header border-0">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                      <h4 class="modal-title question__title" id="exampleModalCenterTitle">家財破損があった場合、どのような補償がありますか？</h5>
+                      <p class="modal-footer border-0">
+                        「Airbnbホスト保証」とは、ゲストによる家財破損の被害総額が保証金を超える場合や保証金未設定の場合、ホストに最大$1,000,000までの補償をお支払いするプログラムのことです。
+
+                        <p class="modal-footer border-0">
+                          現金、有価証券、収集品、稀少価値のある芸術品、宝石、ペット、対人賠償責任は「Airbnbホスト保証」プログラムの適用対象外です。 ホストのみなさまには、自宅を貸し出す際に貴重品を安全な場所に保管または撤去するよう推奨しています。 また、摩耗や劣化が原因の破損も本プログラムの対象外となります。</p>
+                      <p class="modal-footer justify-content-start border-0">ホスト保証の詳細は
+                      <a href="http://airbnb.com/guarantee">http://airbnb.com/guarantee</a>
+                      でご確認いただけます</p>
+                  </div>
+                </div>
+              </div>
+
+              <a class="list-group-item border-left-0 border-right-0" style="border-bottom: 2px;" href="#" data-toggle="modal" data-target="#exampleModalFifth">リスティングの料金を選ぶには？</a>
+              <div class="modal" id="exampleModalFifth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <!-- style="min-width: 560px;が効くがmdサイズのちょうどいい大きさにできない -->
+                  <div class="modal-content p-4">
+                    <div class="modal-header border-0">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                      <h4 class="modal-title question__title" id="exampleModalCenterTitle">リスティングの料金を選ぶには？
+                      </h5>
+                      <p class="modal-footer border-0">
+                        料金選びは100%ホストの裁量に任されています。 値付けの目安が欲しい場合には、お住まいの都市やエリアで類似のリスティングを検索すると大体の相場感がつかめます。 追加料金 > - 清掃料金：清掃料金は、1泊あたりの宿泊料金に含めることも、料金設定で別途追加することもできます。 上> - その他の料金：宿泊料金とは別に料金（レートチェックイン、ペットなど）を請求したいときは、予約前にそれが有料であることをゲストに事前通告した上で、問題解決センターを通じてセキュアな環境で支払いを請求するようにしましょう。                      <p class="modal-footer border-0">
+                        Airbnbでは、ゲストに下記のような情報のご提出をお願いしています。 • 氏名 • メールアドレス • 認証済みの電話番号 • 自己紹介メッセージ • ハウスルールへの同意 • お支払い情報
+                      </p>
+                      
+                  </div>
+                </div>
+              </div>
+
+              <a class="list-group-item border-left-0 border-right-0" href="#" data-toggle="modal" data-target="#exampleModalSixth">料金設定の支援ツールはありますか？</a>
+              <div class="modal" id="exampleModalSixth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <!-- style="min-width: 560px;が効くがmdサイズのちょうどいい大きさにできない -->
+                  <div class="modal-content p-4">
+                    <div class="modal-header border-0">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                      <h4 class="modal-title question__title" id="exampleModalCenterTitle">料金設定の支援ツールはありますか？</h5>
+                      <p class="modal-footer border-0">
+                        Airbnbのスマートプライシングを使うと、類似のお部屋の需要変動に合わせて料金を自動的に値上げしたり値下げしたりすることができます。</p>
+                      <p class="modal-footer border-0">
+                        料金の最終決定権は常にホストにあるため、スマートプライシングはホストが事前に設定した料金範囲内で1泊あたりの料金を決めます。また、ホストがいつでも手動で変更することが可能です。</p>
+                      <p class="modal-footer border-0">
+                        スマートプライシングは、リスティングのタイプ、所在地、シーズン、需要、その他の要因（地域のイベントなど）にもとづいて料金を決定します。</p>
+                  </div>
+                </div>
+              </div>
+            </ul>
+        </div>
+      </div>
+
+      <div class="container detail">
+        <div class="row">
+            <h5 class="detail__title text-left">ホスティング詳細はこちら</h5>
+        </div>
+        <div class="row">
+          <div class="detail__wrap">
+  
+            <div class="card col-4 border-0">
+              <a href="https://www.airbnb.jp/d/setup"><img src="./img/img1.jpg" alt="#" class="card-img-top"></a>
+              
+                <div class="card-body">
+                  <h5 class="card-title">初期設定</h5>
+                  <p class="card-text">ホスティング入門ガイド</p>
+                  <a href="#">もっと詳しく</a>
+                </div>
+            </div>
+            <div class="card col-4 border-0">
+              <a href="https://www.airbnb.jp/d/safety"><img src="./img/img2.jpg" alt="#" class="card-img-top"></a>
+              <div class="card-body">
+                <h5 class="card-title">安全</h5>
+                <p class="card-text">ホストを守るAirbnbの仕組み</p>
+                <a href="#">もっと詳しく</a>
+              </div>
+            </div>
+            <div class="card col-4 border-0">
+              <a href="https://www.airbnb.jp/d/financials"><img src="./img/img3.jpg" alt="#" class="card-img-top"></a>
+              <div class="card-body">
+                <h5 class="card-title">マネープラン</h5>
+                <p class="card-text">Airbnbで収益を得るには</p>
+                <a href="#">もっと詳しく</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- レスポンシブ用details -->
+      <div class="container res__detail">
+        <div class="row">
+          <h4 class="detail__title col-12 text-left mb-4">ホスティング詳細はこちら</h4>
+        </div>
+        <div class="row mx-2">
+          <a class="media res__detail__wrap col-12 pl-0" style="text-decoration: none; color: rgb(82, 78, 78); border: 1px solid #ccc; height: 64px; box-shadow: 0 3px 3px rgb(238, 234, 234);" href="#" src="https://www.airbnb.jp/d/setup">
+            <img class="d-flex align-self-center mr-3" src="https://picsum.photos/id/242/64/64" alt="Generic placeholder image">
+            <div class="media-body pt-2" style="line-height: .75rem;">
+              <h5 class="mt-0" style="font-size: .9rem;">初期設定</h5>
+              <p style="font-size: .9rem;">ホスティング入門ガイド</p>
+            </div>
+          </a>
+          
+          <a class="media res__detail__wrap col-12 pl-0 mt-3" style="text-decoration: none; border: 1px solid #ccc; height: 64px; box-shadow: 0 3px 3px rgb(238, 234, 234); color: rgb(82, 78, 78);" href="#" src="https://www.airbnb.jp/d/safety">
+            <img class="d-flex align-self-center mr-3" src="https://picsum.photos/id/243/64/64" alt="Generic placeholder image">
+            <div class="media-body pt-2" style="line-height: .75rem;">
+              <h5 class="mt-0" style="font-size: .9rem;">安全</h5>
+              <p style="font-size: .9rem;">ホストを守るAirbnbのしくみ</p>
+            </div>
+          </a>
+          
+          <a class="media res__detail__wrap col-12 pl-0 mt-3" style="text-decoration: none; border: 1px solid #ccc; height: 64px; box-shadow: 0 3px 3px rgb(238, 234, 234); color: rgb(82, 78, 78);" href="#" src="https://www.airbnb.jp/d/financials">
+            <img class="d-flex align-self-center mr-3" src="https://picsum.photos/id/241/64/64" alt="Generic placeholder image">
+            <div class="media-body pt-2" style="line-height: .75rem;">
+              <h5 class="mt-0" style="font-size: .9rem;">マネープラン</h5>
+              <p style="font-size: .9rem;">Airbnbで収益を得るには</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="container mb-5">
+        <div class="row">
+          <div class="jumbotron-fluid jumbotron__earn">
+            <div class="container jumbotron__earn__wrap">
+              <div class="col-10 jumbotron__earn__wrap__text">
+                <h1 class="earn__start display-4 font-weight-bold text-white">収益化してみますか？</h1>
+                <!-- レスポンシブh1 -->
+                <h1 class="res__earn__start font-weight-bold text-white">収益化してみますか？</h1>
+                
+                    <!-- ボタン消えた -->
+                    <a class="btn btn-white" href="https://www.airbnb.jp/login?redirect_url=%2Fbecome-a-host%3Ffrom_sh%3D1%26room_type_category%3D%26person_capacity%3D4%26countryCode%3D"></a>
+                  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="jumbotron__footer mt-5">
+       <div class="container">
+        <div class="row">
+            <div class="footer">
+            
+              <div class="col-3">
+                <h6>企業情報</h6>
+                <a href="https://news.airbnb.com/ja/">Airbnbのご利用方法</a><br>
+                <a href="https://www.airbnb.jp/d/howairbnbworks">ニュースルーム</a><br>
+                <a href="https://www.airbnb.jp/plus">Airbnb Plus</a><br>
+                <a href="https://www.airbnb.jp/luxury">Airbnb Luxe</a><br>
+                <a href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a><br>
+                <a href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a><br>
+                <a href="https://www.airbnb.jp/d/olympics">オリンピック</a><br>
+                <a href="https://careers.airbnb.com/">採用情報</a><br>
+              </div>
+
+              <div class="col-3">
+                <h6>コミュニティ</h6>
+                <a href="https://www.airbnb.jp/diversity">ダイバーシティ＆ビロンギング</a><br>
+                <a href="https://www.airbnb.jp/d/accessibility">アクセシビリティ対応</a><br>
+                <a href="https://www.airbnb.jp/associates?from=footer">Airbnbアソシエイト</a><br>
+                <a href="hhttps://www.airbnb.jp/invite?r=6">お友達を招待</a><br>
+              </div>
+
+              <div class="col-3">
+                <h6>ホスト</h6>
+                <a href="https://www.airbnb.jp/host/homes?from_footer=1">お部屋を掲載</a><br>
+                <a href="https://www.airbnb.jp/d/onlinehost">オンライン体験をホストする</a><br>
+                <a href="https://www.airbnb.jp/host/experiences">体験をホストする</a><br>
+                <a href="https://www.airbnb.jp/help/article/1386/%E6%97%A5%E6%9C%AC%E3%81%A7%E3%81%AE%E8%B2%AC%E4%BB%BB%E3%81%82%E3%82%8B%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">責任あるホスティング</a><br>
+                <a href="https://www.airbnb.jp/openhomes?from_footer=1">オープンホーム</a><br>
+                <a href="https://www.airbnb.jp/resources/hosting-homes">リソースセンター</a><br>
+                <a href="https://community.withairbnb.com/t5/Airbnb%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/ct-p/Community-Center-Japanese">コミュニティセンター</a><br>
+              </div>
+
+              <div class="col-3">
+                <h6>サポート</h6>
+                <a href="https://www.airbnb.jp/resources/hosting-homes?persona=guest">新型コロナウィルスに関する最新情報</a><br>
+                <a href="https://www.airbnb.jp/help/home">ヘルプセンター</a><br>
+                <a href="https://www.airbnb.jp/help/article/2701/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9covid19%E3%81%AB%E9%96%A2%E9%80%A3%E3%81%99%E3%82%8B%E9%85%8C%E9%87%8F%E3%81%99%E3%81%B9%E3%81%8D%E4%BA%8B%E6%83%85%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">キャンセルオプション</a><br>
+                <a href="https://www.airbnb.jp/neighbors">近隣コミュニティサポート</a><br>
+                <a href="https://www.airbnb.jp/trust">トラスト＆セーフティー</a><br>
+              </div>
+            </div>
+          </div>
+
+            <div class="row my-5">
+                <div class="footer-bottom__left col-8">
+                  <a href="https://www.airbnb.jp/about/company-details">Airbnb Global Services Limited<br>
+                    観光庁長官(01)第S0001号(2018年6月15日-2023年6月14日)</a>
+                  <p>&copy;2020 Airbnb, Inc. All rights reserved</p>
+                  <a href="https://www.airbnb.jp/terms/privacy_policy">プライバシー</a>
+                  <span>・</span><a href="https://www.airbnb.jp/terms">利用規約</a>
+                  <span>・</span><a href="https://www.airbnb.jp/sitemaps/v2">サイトマップ</a>
+                  <span>・</span><a href="https://www.airbnb.jp/about/company-details">企業情報</a>
+                </div>
+              
+          
+                <div class="footer-bottom__right col-4 font-weight-bold">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                  </svg>
+                  <p>日本語 (JP)</p>&nbsp;<p>¥&nbsp;JPY</p><a href="https://www.facebook.com/AirbnbJapan"><i class="fa fa-facebook fa-lg"></i></a><a href="https://twitter.com/airbnb_jp"><i class="fa fa-twitter fa-lg"></i></a><a href="https://www.instagram.com/airbnb/"><i class="fa fa-instagram fa-lg"></i></a>
+
+                </div>
+            </div>
+          </div>
+      </div>
+      <!-- レスポンシブfooter -->
+      <div class="container-fluid res__footer" style="border: 1px solid rgb(241, 239, 239);"></div>
+      <div class="container-fluid py-4 res__footer__p" style="background-color: rgb(252, 248, 248);">
+        <div class="container">
+        <div class="row">
+          <div class="res__footer__wrap col-12">
+            <h6>企業情報</h6>
+            <a style="color: black; font-size: 14px;" href="https://news.airbnb.com/ja/">Airbnbのご利用方法</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/howairbnbworks">ニュースルーム</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/plus">Airbnb Plus</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/olympics">オリンピック</a><br>
+            <a style="color: black; font-size: 14px;" href="https://careers.airbnb.com/">採用情報</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container-fluid res__footer" style="border: 1px solid rgb(241, 239, 239);"></div>
+      <div class="container-fluid py-4 res__footer__p" style="background-color: rgb(252, 248, 248);">
+        <div class="container">
+        <div class="row">
+          <div class="res__footer__wrap col-12">
+            <h6>コミュニティ</h6>
+            <a style="color: black; font-size: 14px;" href="https://news.airbnb.com/ja/">Airbnbのご利用方法</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/howairbnbworks">ニュースルーム</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/plus">Airbnb Plus</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/olympics">オリンピック</a><br>
+            <a style="color: black; font-size: 14px;" href="https://careers.airbnb.com/">採用情報</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container-fluid res__footer" style="border: 1px solid rgb(241, 239, 239);"></div>
+      <div class="container-fluid py-4 res__footer__p" style="background-color: rgb(252, 248, 248);">
+        <div class="container">
+        <div class="row">
+          <div class="res__footer__wrap col-12">
+            <h6>ホスト</h6>
+            <a style="color: black; font-size: 14px;" href="https://news.airbnb.com/ja/">Airbnbのご利用方法</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/howairbnbworks">ニュースルーム</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/plus">Airbnb Plus</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a><br>
+            <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/olympics">オリンピック</a><br>
+            <a style="color: black; font-size: 14px;" href="https://careers.airbnb.com/">採用情報</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid res__footer" style="border: 1px solid rgb(241, 239, 239);"></div>
+    <div class="container-fluid py-4 res__footer__p" style="background-color: rgb(252, 248, 248);">
+      <div class="container">
+      <div class="row">
+        <div class="res__footer__wrap col-12">
+          <h6>サポート</h6>
+          <a style="color: black; font-size: 14px;" href="https://news.airbnb.com/ja/">Airbnbのご利用方法</a><br>
+          <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/howairbnbworks">ニュースルーム</a><br>
+          <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/plus">Airbnb Plus</a><br>
+          <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a><br>
+          <a style="color: black; font-size: 14px;" href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a><br>
+          <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a><br>
+          <a style="color: black; font-size: 14px;" href="https://www.airbnb.jp/d/olympics">オリンピック</a><br>
+          <a style="color: black; font-size: 14px;" href="https://careers.airbnb.com/">採用情報</a><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid res__footer" style="border: 1px solid rgb(241, 239, 239);"></div>
+   <div class="container-fluid py-4 res__footer__bottom" style="background-color: rgb(252, 248, 248);">
+    <div class="container">
+      <div class="row">
+        <div class="res__footer__bottom font-weight-bold d-flex">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+          </svg>
+          <a href="#" src="#" style="color: black; font-size: 14px;">日本語 (JP)</a><a href="#" src="#" class="ml-3" style="color: black; font-size: 14px;">¥&nbsp;JPY</a>
+        </div>
+      </div>
+
+          <div class="row">
+            <a style="line-height: 1rem; color: black; font-weight: 14px;" href="https://www.airbnb.jp/about/company-details">Airbnb Global Services Limited 観光庁長官(01)第S0001号(2018年6月15日-2023年6月14日)</a>
+          </div>
+
+          <div class="row">
+            <p>&copy;2020 Airbnb, Inc. All rights reserved</p>
+          </div>
+  
+          <div class="row d-flex">
+            <a style="color: black;" href=""><p style="font-weight: 10px;">プライバシー</p></a><span>・</span>
+            <a style="color: black;" href=""><p style="font-weight: 10px;">利用規約</p></a><span>・</span>
+            <a style="color: black;" href=""><p style="font-weight: 10px;">サイトマップ</p></a><span>・</span>
+            <a style="color: black;" href=""><p style="font-weight: 10px;">企業情報</p></a>
+          </div>
+      
+    </div>
+   </div>
+
+    <div class="modal" id="hd-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">ログイン</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="src/index.js"></script>
+    
+  </body>
+</html>

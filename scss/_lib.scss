@@ -1,0 +1,342 @@
+//////////////////////////
+////////--共通--//////////
+//////////////////////////
+
+
+body {
+    font-family: 'Circular','-apple-system','BlinkMacSystemFont','Roboto','Helvetica Neue' 'MS ゴシック',sans-serif !important;
+    margin: 0 auto;
+    color: #484848;
+    line-height: 200%;
+    
+    h1, h2, h3, h4, h5, h6{
+        font-weight: bold;
+    }
+    p {
+        opacity: 0.8;
+    }
+}
+
+
+
+//////////////////////////
+//////--レスポンシブ--//////
+//////////////////////////
+
+    
+    @media(min-width: 768px) {
+        .res_hd-card {
+            display: none;
+        }
+        .res__jumbotron__main {
+           display: none;
+        }
+        .res__support__main {
+            display: none;
+        }
+        .res__action {
+            display: none;
+        }
+        .res__jumbotron-payment__main {
+            display: none;
+        }
+        .support {
+            margin: 9rem;
+        }
+        .jumbotron-payment {
+            margin: 0 auto;
+            text-align: center;
+        }
+        .res__jumbotron-about__main {
+            display: none;
+        }
+        .res__question__main {
+            display: none;
+        } 
+        .res__detail {
+            display: none;
+        }
+        .res__earn__start {
+            display: none;
+        }
+        .res__footer {
+            display: none;
+            &__wrap {
+                display: none;
+            }
+        }
+        .res__footer__p {
+            display: none;
+        }
+        .res__footer__bottom {
+            display: none;
+        }
+        .bottom_nav__item {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+        .life-upgrade {
+          display: none !important;
+        }
+        .res__life-upgrade {
+            display: none !important;
+        }
+        .act {
+            display: none!important;
+        }
+        .res__action {
+            display: none!important;
+        }
+        .support {
+            display: none !important;
+        }
+      }
+
+
+
+    //sp
+    @media(max-width: 575px) {
+        .nav-start {
+            display: none;
+        }
+    }
+
+    //sm
+    @media(max-width: 767px) {
+        .hd-card {
+            display: none;
+        }
+        .action {
+            display: none;
+        }
+        .life-upgrade {
+            display: none!important;
+        }
+        .life-upgrade__md {
+            display: none!important;
+        }
+        
+        .jumbotron__footer{
+            display: none;
+        }
+        .jumbotron__main {
+            display: none;
+        }
+
+        .support__main {
+            display: none; 
+        }
+
+        .jumbotron-payment__main {
+            display: none;
+        }
+        .jumbotron__cards {
+            display: block!important;
+        }
+
+        .jumbotron-about__main {
+            display: none;
+        }
+        .question__main {
+            display: none;
+        }
+        .detail {
+            display: none!important;
+        }
+        .earn__start {
+            display: none;
+        }
+        .act {
+            display: none!important;
+        }
+        .action__md {
+            display: none!important;
+        }
+        .support__md {
+            display: none;
+        }
+
+        @mixin title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                position: relative;
+    
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 9%;
+                    top: -15px;//topから15px上に移動
+                    display: inline-block;
+                    width: 60px;
+                    height: 2px;
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    background-color: black;
+                    border-radius: 2px;
+            } 
+        }
+
+        .res__jumbotron__main {
+            @include title
+        }
+
+        .res__support {
+            margin-top: 7rem;
+        }
+
+        .res__support__main {
+            @include title
+            
+        }
+
+        .res__jumbotron-payment__main {
+            @include title
+        }
+
+        .res__jumbotron-about__main {
+            @include title
+        }
+
+        .res__question__main {
+            @include title
+        }
+
+        .support {
+            margin-top: 3rem;
+        }
+
+        .support__right {
+                margin: 1rem 0 0 0.75rem;
+                padding: 0;
+                &__txt {
+                    margin-left: 1rem;
+                }
+            }
+    }
+
+    
+
+    //tab md
+    @media(max-width: 991px){
+        .hd-catch {
+            display: block;
+            margin: 0 auto;
+            
+        }
+
+        .hd-card {
+            position: static;
+            
+        }
+
+        .card__inner {
+            display: block;
+        }
+    }
+
+
+    @media(max-width: 1199px) {
+        
+
+        .hd-section__right {
+            margin-top: 3rem;
+        }
+
+        .hd-card {
+            text-align: center;
+        }
+
+        .action {
+            display: static;
+            justify-content: center;
+            
+            &__pic {
+                margin-top: 2rem;
+            }
+        }
+        .support__inner {
+            display: static;
+            
+            &__left {
+                display: static;
+                margin: 0 auto;
+            }
+        }
+        
+    }
+
+    //pc
+    @media(min-width: 1200px) {
+        .hd-section {
+            display: inline-block;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .action {
+            display: flex;
+        }
+        .action__md {
+            display: none;
+        }
+        
+        .res__life-upgrade {
+            display: none;
+        }
+        .life-upgrade__md {
+            display: none!important;
+        }
+        .support__md {
+            display: none!important;
+        }
+
+        .support {
+            background-color: #fff;
+
+            &__inner {
+                // margin: 0 auto;
+                display: flex;
+                margin-top: 4rem;
+            }
+
+
+        
+            &__left {
+                margin-top: 1rem;
+            }
+        
+            &__right {
+
+                    &__wrap {
+                        margin-bottom: 8px;
+                        display: flex;
+                    
+                        &__check {
+                            margin-right: 10px;
+                            color: #007bff;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+        // @media(max-width: 600px) {
+        //     .sumple_md {
+        //         display: none;
+        //     }
+        //     .sumple_lg {
+        //         display: none;
+        //     }
+        // }
+
+        // @media(min-width: 1200px) {
+        //     .sumple_sm {
+        //         display: none;
+        //     }
+        //     .sumple_md {
+        //         display: none;
+        //     }
+        // }

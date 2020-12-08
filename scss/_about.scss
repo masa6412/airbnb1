@@ -1,0 +1,30 @@
+.jumbotron-about {
+    background-color: #fff;
+    margin-top: 11rem;
+
+    &__inner {
+        // margin: 0 auto;
+        text-align: center;
+        margin-top: 8rem;
+    }
+
+    &__main {
+        font-weight: bold;
+        position: relative;
+        // display: inline-block;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -15px;//topから15px上に移動
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: black;
+            border-radius: 2px;
+        }
+    }
+}

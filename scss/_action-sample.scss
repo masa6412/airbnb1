@@ -1,0 +1,17 @@
+.life-upgrade {
+
+    display: inline-block;
+
+    &__main {
+        font-weight: normal !important;
+        order: 2;
+        
+    }
+}
+
+.life-upgrade button {
+    width: 222px;
+    height: 46px;
+    font-size: 16px;
+    border-width: 2px;
+}

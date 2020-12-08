@@ -1,0 +1,21 @@
+//action-sampleとかなり被っていて修正に弱い
+
+.life-upgrade {
+    display: flex;  
+    margin-top: 4rem;
+
+    &__left {
+        order: 1;
+    }
+    &__right {
+        order: 2;
+        padding-top: 8rem;
+    }
+}
+
+.action-sample button {
+    width: 222px;
+    height: 46px;
+    font-size: 16px;
+    border-width: 2px;
+}
